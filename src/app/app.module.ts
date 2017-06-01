@@ -8,12 +8,14 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AddcountryComponent } from './addcountry/addcountry.component';
+import { AllcountriesComponent } from './allcountries/allcountries.component';
 
 
 @NgModule({
 imports: [ BrowserModule, HttpModule, routing, FormsModule, ReactiveFormsModule ],
 declarations: [ AppComponent,
-RegisterComponent,   LoginComponent],
+RegisterComponent,   LoginComponent, AddcountryComponent, AllcountriesComponent],
 bootstrap: [ AppComponent ]
 })
 

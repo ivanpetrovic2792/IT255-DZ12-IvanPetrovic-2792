@@ -10,6 +10,7 @@ export class AppComponent {
   router: Router;
   isAuth: String;
   currentUrl : String;
+  
   constructor(router: Router) {
   this.router = router;
   this.currentUrl = '';

@@ -20,6 +20,11 @@
                 <li *ngIf="isAuth == 'no'" routerLink="/login" routerLinkActive="active"><a
                 routerLink="/login">Login</a></li>
                 <li *ngIf="isAuth == 'yes'" ><a (click)="onLogout()">Logout</a></li>
+                <li *ngIf="isAuth == 'yes'" routerLink="/addcountry" routerLinkActive="active"><a 
+                routerLink="/addcountry">Add country</a></li>
+                <li *ngIf="isAuth == 'yes'" routerLink="/allcountries" routerLinkActive="active"><a 
+                routerLink="/allcountries">All countries</a></li>
+
             </ul>
         </div>
     </div>
