@@ -158,4 +158,23 @@
         }
     }
 
+    function deleteCountry($id)
+    {
+        global $conn;
+        $rarray = array();
+        if(checkIfLoggedIn())
+        {
+            $result = $conn->prepare("DELETE FROM countries WHERE id=?");
+            $result->bind_param("i",$id);
+            $result->execute();
+            $rarray['success'] = "Deleted successfully";
+        } else
+        {
+            $rarray['error'] = "Please log in";
+            header('HTTP/1.1 401 Unauthorized');
+        }
+        return json_encode($rarray);
+
+    }
+
 ?>

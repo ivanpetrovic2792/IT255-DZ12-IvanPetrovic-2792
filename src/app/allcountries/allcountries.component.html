@@ -1,11 +1,26 @@
 <div class="col-lg-12">
   <br/>Countries<br/> <br/>
-  <div *ngFor="let country of data">
-    Country name: {{country.name}}
-    <br/>
-    Capital: {{country.capital}}
-    <br/>
-    Language: {{country.language}}
-    <br/>
-  </div>
+      <table class="table-stripped table">
+    <thead>
+    <tr>
+    <th>Country name</th>
+    <th>Capital</th>
+    <th>Language</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let room of data">
+    <td>{{country.name}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.language}}</td>
+    <td>
+    <button class="btn btn-danger" (click)="removeCountry($event,
+    country.id)">Delete</button>
+    </td>
+    <td>
+    <button class="btn btn-default"
+    (click)="viewCountry(country.id)">View</button></td>
+    </tr>
+    </tbody>
+    </table>
 </div>
